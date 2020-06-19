@@ -21,6 +21,8 @@
 #include "asio/detail/handler_invoke_helpers.hpp"
 #include "asio/detail/type_traits.hpp"
 #include "asio/detail/variadic_templates.hpp"
+#include "asio/execution/executor.hpp"
+#include "asio/execution/outstanding_work.hpp"
 #include "asio/executor_work_guard.hpp"
 #include "asio/is_executor.hpp"
 #include "asio/system_executor.hpp"
@@ -31,6 +33,46 @@ namespace asio {
 
 namespace detail
 {
+  template <typename Executor, typename = void>
+  class composed_work_guard
+  {
+  public:
+    typedef typename decay<
+        typename prefer_result_type<Executor,
+          execution::outstanding_work_t::tracked_t
+        >::type
+      >::type executor_type;
+
+    composed_work_guard(const Executor& ex)
+      : executor_(asio::prefer(ex, execution::outstanding_work.tracked))
+    {
+    }
+
+    void reset()
+    {
+    }
+
+    executor_type get_executor() const ASIO_NOEXCEPT
+    {
+      return executor_;
+    }
+
+  private:
+    executor_type executor_;
+  };
+
+  template <typename Executor>
+  struct composed_work_guard<Executor,
+      typename enable_if<
+        !execution::is_executor<Executor>::value
+      >::type> : executor_work_guard<Executor>
+  {
+    composed_work_guard(const Executor& ex)
+      : executor_work_guard<Executor>(ex)
+    {
+    }
+  };
+
   template <typename>
   struct composed_io_executors;
 
@@ -158,7 +200,7 @@ namespace detail
     }
 
     typedef system_executor head_type;
-    executor_work_guard<system_executor> head_;
+    composed_work_guard<system_executor> head_;
   };
 
   template <typename Head>
@@ -177,7 +219,7 @@ namespace detail
     }
 
     typedef Head head_type;
-    executor_work_guard<Head> head_;
+    composed_work_guard<Head> head_;
   };
 
 #if defined(ASIO_HAS_VARIADIC_TEMPLATES)
@@ -200,7 +242,7 @@ namespace detail
     }
 
     typedef Head head_type;
-    executor_work_guard<Head> head_;
+    composed_work_guard<Head> head_;
     composed_work<void(Tail...)> tail_;
   };
 
@@ -226,7 +268,7 @@ namespace detail
     } \
   \
     typedef Head head_type; \
-    executor_work_guard<Head> head_; \
+    composed_work_guard<Head> head_; \
     composed_work<void(ASIO_VARIADIC_TARGS(n))> tail_; \
   }; \
   /**/
