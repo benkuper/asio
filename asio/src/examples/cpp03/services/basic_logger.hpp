@@ -38,9 +38,10 @@ public:
    *
    * @param identifier An identifier for this logger.
    */
-  explicit basic_logger(asio::execution_context& context,
+  explicit basic_logger(const asio::any_io_executor& ex,
       const std::string& identifier)
-    : service_(asio::use_service<Service>(context)),
+    : service_(asio::use_service<Service>(
+          asio::query(ex, asio::execution::context))),
       impl_(service_.null())
   {
     service_.create(impl_, identifier);
@@ -50,12 +51,6 @@ public:
   ~basic_logger()
   {
     service_.destroy(impl_);
-  }
-
-  /// Get the io_context associated with the object.
-  asio::io_context& get_io_context()
-  {
-    return service_.get_io_context();
   }
 
   /// Set the output file for all logger instances.

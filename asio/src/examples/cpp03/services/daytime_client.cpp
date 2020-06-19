@@ -30,7 +30,7 @@ void read_handler(const asio::error_code& e,
   }
   else
   {
-    services::logger logger(s->get_executor().context(), "read_handler");
+    services::logger logger(s->get_executor(), "read_handler");
 
     std::string msg = "Read error: ";
     msg += e.message();
@@ -40,7 +40,7 @@ void read_handler(const asio::error_code& e,
 
 void connect_handler(const asio::error_code& e, tcp::socket* s)
 {
-  services::logger logger(s->get_executor().context(), "connect_handler");
+  services::logger logger(s->get_executor(), "connect_handler");
 
   if (!e)
   {
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     asio::io_context io_context;
 
     // Set the name of the file that all logger instances will use.
-    services::logger logger(io_context, "");
+    services::logger logger(io_context.get_executor(), "");
     logger.use_file("log.txt");
 
     // Resolve the address corresponding to the given host.
