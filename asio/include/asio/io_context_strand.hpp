@@ -15,17 +15,17 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
+#include "detail/config.hpp"
 
 #if !defined(ASIO_NO_EXTENSIONS)
 
-#include "asio/async_result.hpp"
-#include "asio/detail/handler_type_requirements.hpp"
-#include "asio/detail/strand_service.hpp"
-#include "asio/detail/wrapped_handler.hpp"
-#include "asio/io_context.hpp"
+#include "async_result.hpp"
+#include "detail/handler_type_requirements.hpp"
+#include "detail/strand_service.hpp"
+#include "detail/wrapped_handler.hpp"
+#include "io_context.hpp"
 
-#include "asio/detail/push_options.hpp"
+#include "detail/push_options.hpp"
 
 namespace asio {
 
@@ -367,7 +367,7 @@ private:
 
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "detail/pop_options.hpp"
 
 #endif // !defined(ASIO_NO_EXTENSIONS)
 

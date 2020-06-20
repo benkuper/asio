@@ -16,13 +16,13 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
+#include "../detail/config.hpp"
 #include <string>
-#include "asio/detail/string_view.hpp"
-#include "asio/error_code.hpp"
-#include "asio/ip/address_v4_range.hpp"
+#include "../detail/string_view.hpp"
+#include "../error_code.hpp"
+#include "../ip/address_v4_range.hpp"
 
-#include "asio/detail/push_options.hpp"
+#include "../detail/push_options.hpp"
 
 namespace asio {
 namespace ip {
@@ -251,9 +251,9 @@ std::basic_ostream<Elem, Traits>& operator<<(
 } // namespace ip
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "../detail/pop_options.hpp"
 
-#include "asio/ip/impl/network_v4.hpp"
+#include "../ip/impl/network_v4.hpp"
 #if defined(ASIO_HEADER_ONLY)
 # include "asio/ip/impl/network_v4.ipp"
 #endif // defined(ASIO_HEADER_ONLY)

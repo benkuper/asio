@@ -15,21 +15,21 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
+#include "detail/config.hpp"
 #include <cstddef>
 #include <string>
-#include "asio/async_result.hpp"
-#include "asio/buffer.hpp"
-#include "asio/detail/regex_fwd.hpp"
-#include "asio/detail/string_view.hpp"
-#include "asio/detail/type_traits.hpp"
-#include "asio/error.hpp"
+#include "async_result.hpp"
+#include "buffer.hpp"
+#include "detail/regex_fwd.hpp"
+#include "detail/string_view.hpp"
+#include "detail/type_traits.hpp"
+#include "error.hpp"
 
 #if !defined(ASIO_NO_EXTENSIONS)
 # include "asio/basic_streambuf_fwd.hpp"
 #endif // !defined(ASIO_NO_EXTENSIONS)
 
-#include "asio/detail/push_options.hpp"
+#include "detail/push_options.hpp"
 
 namespace asio {
 
@@ -2856,8 +2856,8 @@ async_read_until(AsyncReadStream& s, DynamicBuffer_v2 buffers,
 
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "detail/pop_options.hpp"
 
-#include "asio/impl/read_until.hpp"
+#include "impl/read_until.hpp"
 
 #endif // ASIO_READ_UNTIL_HPP
