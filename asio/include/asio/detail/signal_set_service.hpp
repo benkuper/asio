@@ -29,13 +29,13 @@
 #include "../detail/socket_types.hpp"
 
 #if defined(ASIO_HAS_IOCP)
-# include "asio/detail/win_iocp_io_context.hpp"
+#include "../detail/win_iocp_io_context.hpp"
 #else // defined(ASIO_HAS_IOCP)
-# include "asio/detail/scheduler.hpp"
+#include "../detail/scheduler.hpp"
 #endif // defined(ASIO_HAS_IOCP)
 
 #if !defined(ASIO_WINDOWS) && !defined(__CYGWIN__)
-# include "asio/detail/reactor.hpp"
+#include "../detail/reactor.hpp"
 #endif // !defined(ASIO_WINDOWS) && !defined(__CYGWIN__)
 
 #include "../detail/push_options.hpp"
@@ -223,7 +223,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/signal_set_service.ipp"
+#include "../detail/impl/signal_set_service.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_SIGNAL_SET_SERVICE_HPP

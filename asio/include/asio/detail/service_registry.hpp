@@ -158,7 +158,7 @@ private:
 
 #include "../detail/impl/service_registry.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/service_registry.ipp"
+#include "../detail/impl/service_registry.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_SERVICE_REGISTRY_HPP

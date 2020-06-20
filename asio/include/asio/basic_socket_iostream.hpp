@@ -25,7 +25,7 @@
 
 #if !defined(ASIO_HAS_VARIADIC_TEMPLATES)
 
-# include "asio/detail/variadic_templates.hpp"
+#include "detail/variadic_templates.hpp"
 
 // A macro that should expand to:
 //   template <typename T1, ..., typename Tn>

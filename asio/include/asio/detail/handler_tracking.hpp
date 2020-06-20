@@ -26,10 +26,10 @@ class execution_context;
 #if defined(ASIO_CUSTOM_HANDLER_TRACKING)
 # include ASIO_CUSTOM_HANDLER_TRACKING
 #elif defined(ASIO_ENABLE_HANDLER_TRACKING)
-# include "asio/error_code.hpp"
-# include "asio/detail/cstdint.hpp"
-# include "asio/detail/static_mutex.hpp"
-# include "asio/detail/tss_ptr.hpp"
+#include "../error_code.hpp"
+#include "../detail/cstdint.hpp"
+#include "../detail/static_mutex.hpp"
+#include "../detail/tss_ptr.hpp"
 #endif // defined(ASIO_ENABLE_HANDLER_TRACKING)
 
 #include "../detail/push_options.hpp"
@@ -258,7 +258,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/handler_tracking.ipp"
+#include "../detail/impl/handler_tracking.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_HANDLER_TRACKING_HPP

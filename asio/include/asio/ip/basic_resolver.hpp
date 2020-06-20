@@ -31,9 +31,9 @@
 #include "../ip/basic_resolver_results.hpp"
 #include "../ip/resolver_base.hpp"
 #if defined(ASIO_WINDOWS_RUNTIME)
-# include "asio/detail/winrt_resolver_service.hpp"
+#include "../detail/winrt_resolver_service.hpp"
 #else
-# include "asio/detail/resolver_service.hpp"
+#include "../detail/resolver_service.hpp"
 #endif
 
 #if defined(ASIO_HAS_MOVE)

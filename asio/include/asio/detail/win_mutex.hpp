@@ -70,7 +70,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/win_mutex.ipp"
+#include "../detail/impl/win_mutex.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_WINDOWS)

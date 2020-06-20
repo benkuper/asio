@@ -33,9 +33,9 @@
 #include "executor.hpp"
 #include "serial_port_base.hpp"
 #if defined(ASIO_HAS_IOCP)
-# include "asio/detail/win_iocp_serial_port_service.hpp"
+#include "detail/win_iocp_serial_port_service.hpp"
 #else
-# include "asio/detail/reactive_serial_port_service.hpp"
+#include "detail/reactive_serial_port_service.hpp"
 #endif
 
 #if defined(ASIO_HAS_MOVE)

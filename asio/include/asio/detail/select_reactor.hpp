@@ -38,7 +38,7 @@
 #include "../execution_context.hpp"
 
 #if defined(ASIO_HAS_IOCP)
-# include "asio/detail/thread.hpp"
+#include "../detail/thread.hpp"
 #endif // defined(ASIO_HAS_IOCP)
 
 #include "../detail/push_options.hpp"
@@ -226,7 +226,7 @@ private:
 
 #include "../detail/impl/select_reactor.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/select_reactor.ipp"
+#include "../detail/impl/select_reactor.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_HAS_IOCP)

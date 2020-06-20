@@ -131,7 +131,7 @@ private:
 #include "../../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/local/detail/impl/endpoint.ipp"
+#include "../../local/detail/impl/endpoint.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_HAS_LOCAL_SOCKETS)

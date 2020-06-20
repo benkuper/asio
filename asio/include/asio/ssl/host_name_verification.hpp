@@ -84,7 +84,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ssl/impl/host_name_verification.ipp"
+#include "../ssl/impl/host_name_verification.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_SSL_HOST_NAME_VERIFICATION_HPP

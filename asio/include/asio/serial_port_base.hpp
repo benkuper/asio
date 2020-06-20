@@ -158,7 +158,7 @@ protected:
 
 #include "impl/serial_port_base.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/impl/serial_port_base.ipp"
+#include "impl/serial_port_base.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_HAS_SERIAL_PORT)

@@ -228,7 +228,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/reactive_serial_port_service.ipp"
+#include "../detail/impl/reactive_serial_port_service.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // !defined(ASIO_WINDOWS) && !defined(__CYGWIN__)

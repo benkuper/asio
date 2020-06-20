@@ -406,7 +406,7 @@ service_id<Type> execution_context_service_base<Type>::id;
 
 #include "impl/execution_context.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/impl/execution_context.ipp"
+#include "impl/execution_context.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_EXECUTION_CONTEXT_HPP

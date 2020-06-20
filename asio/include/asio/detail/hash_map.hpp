@@ -22,7 +22,7 @@
 #include "../detail/noncopyable.hpp"
 
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
-# include "asio/detail/socket_types.hpp"
+#include "../detail/socket_types.hpp"
 #endif // defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 
 #include "../detail/push_options.hpp"

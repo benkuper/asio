@@ -90,7 +90,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ssl/impl/rfc2818_verification.ipp"
+#include "../ssl/impl/rfc2818_verification.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // !defined(ASIO_NO_DEPRECATED)

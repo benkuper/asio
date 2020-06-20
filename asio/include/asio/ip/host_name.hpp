@@ -36,7 +36,7 @@ ASIO_DECL std::string host_name(asio::error_code& ec);
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ip/impl/host_name.ipp"
+#include "../ip/impl/host_name.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_IP_HOST_NAME_HPP

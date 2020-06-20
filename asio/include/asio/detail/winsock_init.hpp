@@ -120,7 +120,7 @@ static const winsock_init<>& winsock_init_instance = winsock_init<>(false);
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/winsock_init.ipp"
+#include "../detail/impl/winsock_init.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_WINDOWS) || defined(__CYGWIN__)

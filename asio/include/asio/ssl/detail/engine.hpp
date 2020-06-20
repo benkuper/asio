@@ -159,7 +159,7 @@ private:
 #include "../../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ssl/detail/impl/engine.ipp"
+#include "../../ssl/detail/impl/engine.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_SSL_DETAIL_ENGINE_HPP

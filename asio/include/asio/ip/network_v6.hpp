@@ -229,7 +229,7 @@ std::basic_ostream<Elem, Traits>& operator<<(
 
 #include "../ip/impl/network_v6.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ip/impl/network_v6.ipp"
+#include "../ip/impl/network_v6.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_IP_NETWORK_V6_HPP

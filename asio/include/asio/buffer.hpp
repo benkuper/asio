@@ -45,7 +45,7 @@
 #endif // defined(__GNUC__)
 
 #if defined(ASIO_ENABLE_BUFFER_DEBUGGING)
-# include "asio/detail/functional.hpp"
+#include "detail/functional.hpp"
 #endif // ASIO_ENABLE_BUFFER_DEBUGGING
 
 #if defined(ASIO_HAS_BOOST_WORKAROUND)
@@ -60,7 +60,7 @@
 #endif // defined(ASIO_HAS_BOOST_WORKAROUND)
 
 #if defined(ASIO_ENABLE_ARRAY_BUFFER_WORKAROUND)
-# include "asio/detail/type_traits.hpp"
+#include "detail/type_traits.hpp"
 #endif // defined(ASIO_ENABLE_ARRAY_BUFFER_WORKAROUND)
 
 #include "detail/push_options.hpp"

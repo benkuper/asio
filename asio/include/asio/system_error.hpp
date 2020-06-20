@@ -23,8 +23,8 @@
 # include <cerrno>
 # include <exception>
 # include <string>
-# include "asio/error_code.hpp"
-# include "asio/detail/scoped_ptr.hpp"
+#include "error_code.hpp"
+#include "detail/scoped_ptr.hpp"
 #endif // defined(ASIO_HAS_STD_SYSTEM_ERROR)
 
 #include "detail/push_options.hpp"

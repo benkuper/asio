@@ -377,7 +377,7 @@ ASIO_DECL u_short_type host_to_network_short(u_short_type value);
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/socket_ops.ipp"
+#include "../detail/impl/socket_ops.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_SOCKET_OPS_HPP

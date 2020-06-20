@@ -18,11 +18,11 @@
 #include "../detail/config.hpp"
 
 #if defined(ASIO_HAS_CHRONO)
-# include "asio/detail/chrono.hpp"
+#include "../detail/chrono.hpp"
 #endif // defined(ASIO_HAS_CHRONO)
 
 #if defined(ASIO_HAS_BOOST_DATE_TIME)
-# include "asio/detail/date_time_fwd.hpp"
+#include "../detail/date_time_fwd.hpp"
 #endif // defined(ASIO_HAS_BOOST_DATE_TIME)
 
 #if !defined(GENERATING_DOCUMENTATION)

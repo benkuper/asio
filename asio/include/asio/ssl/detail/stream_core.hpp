@@ -18,9 +18,9 @@
 #include "../../detail/config.hpp"
 
 #if defined(ASIO_HAS_BOOST_DATE_TIME)
-# include "asio/deadline_timer.hpp"
+#include "../../deadline_timer.hpp"
 #else // defined(ASIO_HAS_BOOST_DATE_TIME)
-# include "asio/steady_timer.hpp"
+#include "../../steady_timer.hpp"
 #endif // defined(ASIO_HAS_BOOST_DATE_TIME)
 #include "../../ssl/detail/engine.hpp"
 #include "../../buffer.hpp"

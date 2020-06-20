@@ -98,7 +98,7 @@ asio_handler_deallocate(void* pointer, std::size_t size, ...);
 #include "detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/impl/handler_alloc_hook.ipp"
+#include "impl/handler_alloc_hook.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_HANDLER_ALLOC_HOOK_HPP

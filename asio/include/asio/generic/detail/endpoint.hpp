@@ -127,7 +127,7 @@ private:
 #include "../../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/generic/detail/impl/endpoint.ipp"
+#include "../../generic/detail/impl/endpoint.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_GENERIC_DETAIL_ENDPOINT_HPP

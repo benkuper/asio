@@ -136,7 +136,7 @@ private:
 
 #include "../detail/impl/strand_executor_service.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/strand_executor_service.ipp"
+#include "../detail/impl/strand_executor_service.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_STRAND_EXECUTOR_SERVICE_HPP

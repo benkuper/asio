@@ -47,7 +47,7 @@ inline void throw_error(const asio::error_code& err,
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/throw_error.ipp"
+#include "../detail/impl/throw_error.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_THROW_ERROR_HPP

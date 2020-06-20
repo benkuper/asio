@@ -60,7 +60,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/timer_queue_set.ipp"
+#include "../detail/impl/timer_queue_set.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_TIMER_QUEUE_SET_HPP

@@ -129,7 +129,7 @@ ASIO_DECL int poll_error(int d,
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/descriptor_ops.ipp"
+#include "../detail/impl/descriptor_ops.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // !defined(ASIO_WINDOWS)

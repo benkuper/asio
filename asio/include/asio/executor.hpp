@@ -335,7 +335,7 @@ ASIO_USES_ALLOCATOR(asio::executor)
 
 #include "impl/executor.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/impl/executor.ipp"
+#include "impl/executor.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_EXECUTOR_HPP

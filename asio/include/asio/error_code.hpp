@@ -21,7 +21,7 @@
 # include <system_error>
 #else // defined(ASIO_HAS_STD_SYSTEM_ERROR)
 # include <string>
-# include "asio/detail/noncopyable.hpp"
+#include "detail/noncopyable.hpp"
 # if !defined(ASIO_NO_IOSTREAM)
 #  include <iosfwd>
 # endif // !defined(ASIO_NO_IOSTREAM)
@@ -196,7 +196,7 @@ std::basic_ostream<Elem, Traits>& operator<<(
 #include "detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/impl/error_code.ipp"
+#include "impl/error_code.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_ERROR_CODE_HPP

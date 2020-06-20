@@ -91,7 +91,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/timer_queue_ptime.ipp"
+#include "../detail/impl/timer_queue_ptime.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_HAS_BOOST_DATE_TIME)

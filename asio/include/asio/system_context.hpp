@@ -75,7 +75,7 @@ private:
 
 #include "impl/system_context.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/impl/system_context.ipp"
+#include "impl/system_context.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_SYSTEM_CONTEXT_HPP

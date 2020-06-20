@@ -18,9 +18,9 @@
 #include "../detail/config.hpp"
 
 #if defined(ASIO_HAS_IOCP)
-# include "asio/detail/win_iocp_operation.hpp"
+#include "../detail/win_iocp_operation.hpp"
 #else
-# include "asio/detail/scheduler_operation.hpp"
+#include "../detail/scheduler_operation.hpp"
 #endif
 
 namespace asio {

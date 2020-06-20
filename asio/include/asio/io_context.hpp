@@ -25,14 +25,14 @@
 #include "execution_context.hpp"
 
 #if defined(ASIO_HAS_CHRONO)
-# include "asio/detail/chrono.hpp"
+#include "detail/chrono.hpp"
 #endif // defined(ASIO_HAS_CHRONO)
 
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
-# include "asio/detail/winsock_init.hpp"
+#include "detail/winsock_init.hpp"
 #elif defined(__sun) || defined(__QNX__) || defined(__hpux) || defined(_AIX) \
   || defined(__osf__)
-# include "asio/detail/signal_init.hpp"
+#include "detail/signal_init.hpp"
 #endif
 
 #include "detail/push_options.hpp"
@@ -860,7 +860,7 @@ asio::detail::service_id<Type> service_base<Type>::id;
 
 #include "impl/io_context.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/impl/io_context.ipp"
+#include "impl/io_context.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 // If both io_context.hpp and strand.hpp have been included, automatically

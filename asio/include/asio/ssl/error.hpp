@@ -119,7 +119,7 @@ inline asio::error_code make_error_code(stream_errors e)
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ssl/impl/error.ipp"
+#include "../ssl/impl/error.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_SSL_ERROR_HPP

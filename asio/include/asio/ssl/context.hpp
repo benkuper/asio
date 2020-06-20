@@ -755,7 +755,7 @@ private:
 
 #include "../ssl/impl/context.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ssl/impl/context.ipp"
+#include "../ssl/impl/context.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_SSL_CONTEXT_HPP

@@ -55,9 +55,9 @@ inline detail::io_context_impl& use_service<detail::io_context_impl>(
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HAS_IOCP)
-# include "asio/detail/win_iocp_io_context.hpp"
+#include "../detail/win_iocp_io_context.hpp"
 #else
-# include "asio/detail/scheduler.hpp"
+#include "../detail/scheduler.hpp"
 #endif
 
 #include "../detail/push_options.hpp"

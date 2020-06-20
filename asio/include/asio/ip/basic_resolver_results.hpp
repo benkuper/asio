@@ -23,7 +23,7 @@
 #include "../ip/basic_resolver_iterator.hpp"
 
 #if defined(ASIO_WINDOWS_RUNTIME)
-# include "asio/detail/winrt_utils.hpp"
+#include "../detail/winrt_utils.hpp"
 #endif // defined(ASIO_WINDOWS_RUNTIME)
 
 #include "../detail/push_options.hpp"

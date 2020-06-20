@@ -30,9 +30,9 @@
 #include "../detail/winrt_utils.hpp"
 
 #if defined(ASIO_HAS_IOCP)
-# include "asio/detail/win_iocp_io_context.hpp"
+#include "../detail/win_iocp_io_context.hpp"
 #else // defined(ASIO_HAS_IOCP)
-# include "asio/detail/scheduler.hpp"
+#include "../detail/scheduler.hpp"
 #endif // defined(ASIO_HAS_IOCP)
 
 #include "../detail/push_options.hpp"

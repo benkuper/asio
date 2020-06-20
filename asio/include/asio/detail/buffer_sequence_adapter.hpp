@@ -644,7 +644,7 @@ private:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/buffer_sequence_adapter.ipp"
+#include "../detail/impl/buffer_sequence_adapter.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_DETAIL_BUFFER_SEQUENCE_ADAPTER_HPP

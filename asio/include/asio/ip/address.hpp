@@ -262,7 +262,7 @@ std::basic_ostream<Elem, Traits>& operator<<(
 
 #include "../ip/impl/address.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ip/impl/address.ipp"
+#include "../ip/impl/address.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_IP_ADDRESS_HPP

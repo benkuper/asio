@@ -30,16 +30,16 @@
 
 #if defined(ASIO_HAS_BOOST_DATE_TIME) \
   && defined(ASIO_USE_BOOST_DATE_TIME_FOR_SOCKET_IOSTREAM)
-# include "asio/detail/deadline_timer_service.hpp"
+#include "detail/deadline_timer_service.hpp"
 #else // defined(ASIO_HAS_BOOST_DATE_TIME)
       // && defined(ASIO_USE_BOOST_DATE_TIME_FOR_SOCKET_IOSTREAM)
-# include "asio/steady_timer.hpp"
+#include "steady_timer.hpp"
 #endif // defined(ASIO_HAS_BOOST_DATE_TIME)
        // && defined(ASIO_USE_BOOST_DATE_TIME_FOR_SOCKET_IOSTREAM)
 
 #if !defined(ASIO_HAS_VARIADIC_TEMPLATES)
 
-# include "asio/detail/variadic_templates.hpp"
+#include "detail/variadic_templates.hpp"
 
 // A macro that should expand to:
 //   template <typename T1, ..., typename Tn>

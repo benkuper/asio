@@ -330,7 +330,7 @@ private:
 
 #include "../detail/impl/win_iocp_io_context.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/win_iocp_io_context.ipp"
+#include "../detail/impl/win_iocp_io_context.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_HAS_IOCP)

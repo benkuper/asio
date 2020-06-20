@@ -95,7 +95,7 @@ openssl_init<Do_Init> openssl_init<Do_Init>::instance_;
 #include "../../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/ssl/detail/impl/openssl_init.ipp"
+#include "../../ssl/detail/impl/openssl_init.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // ASIO_SSL_DETAIL_OPENSSL_INIT_HPP

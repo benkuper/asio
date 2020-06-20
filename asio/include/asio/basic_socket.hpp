@@ -29,11 +29,11 @@
 #include "socket_base.hpp"
 
 #if defined(ASIO_WINDOWS_RUNTIME)
-# include "asio/detail/null_socket_service.hpp"
+#include "detail/null_socket_service.hpp"
 #elif defined(ASIO_HAS_IOCP)
-# include "asio/detail/win_iocp_socket_service.hpp"
+#include "detail/win_iocp_socket_service.hpp"
 #else
-# include "asio/detail/reactive_socket_service.hpp"
+#include "detail/reactive_socket_service.hpp"
 #endif
 
 #if defined(ASIO_HAS_MOVE)

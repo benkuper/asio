@@ -532,7 +532,7 @@ protected:
 #include "../detail/pop_options.hpp"
 
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/reactive_socket_service_base.ipp"
+#include "../detail/impl/reactive_socket_service_base.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // !defined(ASIO_HAS_IOCP)

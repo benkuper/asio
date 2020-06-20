@@ -15,16 +15,16 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
+#include "../../detail/config.hpp"
 
 #if defined(ASIO_HAS_DEV_POLL)
 
-#include "asio/detail/dev_poll_reactor.hpp"
-#include "asio/detail/assert.hpp"
-#include "asio/detail/throw_error.hpp"
-#include "asio/error.hpp"
+#include "../../detail/dev_poll_reactor.hpp"
+#include "../../detail/assert.hpp"
+#include "../../detail/throw_error.hpp"
+#include "../../error.hpp"
 
-#include "asio/detail/push_options.hpp"
+#include "../../detail/push_options.hpp"
 
 namespace asio {
 namespace detail {
@@ -439,7 +439,7 @@ void dev_poll_reactor::cancel_ops_unlocked(socket_type descriptor,
 } // namespace detail
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "../../detail/pop_options.hpp"
 
 #endif // defined(ASIO_HAS_DEV_POLL)
 

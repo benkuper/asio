@@ -234,7 +234,7 @@ private:
 
 #include "../detail/impl/kqueue_reactor.hpp"
 #if defined(ASIO_HEADER_ONLY)
-# include "asio/detail/impl/kqueue_reactor.ipp"
+#include "../detail/impl/kqueue_reactor.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
 
 #endif // defined(ASIO_HAS_KQUEUE)
