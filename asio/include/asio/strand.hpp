@@ -307,7 +307,7 @@ make_strand(ExecutionContext& ctx,
 // include the header file needed for the io_context::strand class.
 #if !defined(ASIO_NO_EXTENSIONS)
 # if defined(ASIO_IO_CONTEXT_HPP)
-#  include "asio/io_context_strand.hpp"
+#  include "io_context_strand.hpp"
 # endif // defined(ASIO_IO_CONTEXT_HPP)
 #endif // !defined(ASIO_NO_EXTENSIONS)
 
