@@ -15,18 +15,18 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
-#include "asio/associated_executor.hpp"
-#include "asio/associated_allocator.hpp"
-#include "asio/async_result.hpp"
-#include "asio/detail/handler_alloc_helpers.hpp"
-#include "asio/detail/handler_cont_helpers.hpp"
-#include "asio/detail/handler_invoke_helpers.hpp"
-#include "asio/detail/type_traits.hpp"
-#include "asio/detail/variadic_templates.hpp"
-#include "asio/system_error.hpp"
+#include "../detail/config.hpp"
+#include "../associated_executor.hpp"
+#include "../associated_allocator.hpp"
+#include "../async_result.hpp"
+#include "../detail/handler_alloc_helpers.hpp"
+#include "../detail/handler_cont_helpers.hpp"
+#include "../detail/handler_invoke_helpers.hpp"
+#include "../detail/type_traits.hpp"
+#include "../detail/variadic_templates.hpp"
+#include "../system_error.hpp"
 
-#include "asio/detail/push_options.hpp"
+#include "../detail/push_options.hpp"
 
 namespace asio {
 namespace detail {
@@ -385,6 +385,6 @@ struct associated_allocator<detail::redirect_error_handler<Handler>, Allocator>
 
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "../detail/pop_options.hpp"
 
 #endif // ASIO_IMPL_REDIRECT_ERROR_HPP

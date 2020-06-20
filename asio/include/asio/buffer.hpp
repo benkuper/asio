@@ -15,18 +15,18 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
+#include "detail/config.hpp"
 #include <cstddef>
 #include <cstring>
 #include <limits>
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include "asio/detail/array_fwd.hpp"
-#include "asio/detail/memory.hpp"
-#include "asio/detail/string_view.hpp"
-#include "asio/detail/throw_exception.hpp"
-#include "asio/detail/type_traits.hpp"
+#include "detail/array_fwd.hpp"
+#include "detail/memory.hpp"
+#include "detail/string_view.hpp"
+#include "detail/throw_exception.hpp"
+#include "detail/type_traits.hpp"
 
 #if defined(ASIO_MSVC) && (ASIO_MSVC >= 1700)
 # if defined(_HAS_ITERATOR_DEBUGGING) && (_HAS_ITERATOR_DEBUGGING != 0)
@@ -63,7 +63,7 @@
 # include "asio/detail/type_traits.hpp"
 #endif // defined(ASIO_ENABLE_ARRAY_BUFFER_WORKAROUND)
 
-#include "asio/detail/push_options.hpp"
+#include "detail/push_options.hpp"
 
 namespace asio {
 
@@ -2414,9 +2414,9 @@ inline std::size_t buffer_copy(const MutableBufferSequence& target,
 
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
-#include "asio/detail/is_buffer_sequence.hpp"
-#include "asio/detail/push_options.hpp"
+#include "detail/pop_options.hpp"
+#include "detail/is_buffer_sequence.hpp"
+#include "detail/push_options.hpp"
 
 namespace asio {
 
@@ -2491,6 +2491,6 @@ struct is_dynamic_buffer
 
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "detail/pop_options.hpp"
 
 #endif // ASIO_BUFFER_HPP

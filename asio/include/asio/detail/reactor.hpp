@@ -15,7 +15,7 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/reactor_fwd.hpp"
+#include "../detail/reactor_fwd.hpp"
 
 #if defined(ASIO_HAS_EPOLL)
 # include "asio/detail/epoll_reactor.hpp"

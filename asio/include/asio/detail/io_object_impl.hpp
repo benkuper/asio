@@ -16,12 +16,12 @@
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
 #include <new>
-#include "asio/detail/config.hpp"
-#include "asio/detail/io_object_executor.hpp"
-#include "asio/detail/type_traits.hpp"
-#include "asio/io_context.hpp"
+#include "../detail/config.hpp"
+#include "../detail/io_object_executor.hpp"
+#include "../detail/type_traits.hpp"
+#include "../io_context.hpp"
 
-#include "asio/detail/push_options.hpp"
+#include "../detail/push_options.hpp"
 
 namespace asio {
 
@@ -188,6 +188,6 @@ private:
 } // namespace detail
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "../detail/pop_options.hpp"
 
 #endif // ASIO_DETAIL_IO_OBJECT_IMPL_HPP

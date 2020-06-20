@@ -15,18 +15,18 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
+#include "detail/config.hpp"
 
 #if !defined(ASIO_NO_IOSTREAM)
 
 #include <streambuf>
 #include <vector>
-#include "asio/basic_socket.hpp"
-#include "asio/basic_stream_socket.hpp"
-#include "asio/detail/buffer_sequence_adapter.hpp"
-#include "asio/detail/memory.hpp"
-#include "asio/detail/throw_error.hpp"
-#include "asio/io_context.hpp"
+#include "basic_socket.hpp"
+#include "basic_stream_socket.hpp"
+#include "detail/buffer_sequence_adapter.hpp"
+#include "detail/memory.hpp"
+#include "detail/throw_error.hpp"
+#include "io_context.hpp"
 
 #if defined(ASIO_HAS_BOOST_DATE_TIME) \
   && defined(ASIO_USE_BOOST_DATE_TIME_FOR_SOCKET_IOSTREAM)
@@ -69,7 +69,7 @@
 
 #endif // !defined(ASIO_HAS_VARIADIC_TEMPLATES)
 
-#include "asio/detail/push_options.hpp"
+#include "detail/push_options.hpp"
 
 namespace asio {
 namespace detail {
@@ -676,7 +676,7 @@ private:
 
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "detail/pop_options.hpp"
 
 #if !defined(ASIO_HAS_VARIADIC_TEMPLATES)
 # undef ASIO_PRIVATE_CONNECT_DEF

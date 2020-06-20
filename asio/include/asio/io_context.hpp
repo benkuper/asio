@@ -15,14 +15,14 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
-#include "asio/detail/config.hpp"
+#include "detail/config.hpp"
 #include <cstddef>
 #include <stdexcept>
 #include <typeinfo>
-#include "asio/async_result.hpp"
-#include "asio/detail/wrapped_handler.hpp"
-#include "asio/error_code.hpp"
-#include "asio/execution_context.hpp"
+#include "async_result.hpp"
+#include "detail/wrapped_handler.hpp"
+#include "error_code.hpp"
+#include "execution_context.hpp"
 
 #if defined(ASIO_HAS_CHRONO)
 # include "asio/detail/chrono.hpp"
@@ -35,7 +35,7 @@
 # include "asio/detail/signal_init.hpp"
 #endif
 
-#include "asio/detail/push_options.hpp"
+#include "detail/push_options.hpp"
 
 namespace asio {
 
@@ -856,9 +856,9 @@ asio::detail::service_id<Type> service_base<Type>::id;
 } // namespace detail
 } // namespace asio
 
-#include "asio/detail/pop_options.hpp"
+#include "detail/pop_options.hpp"
 
-#include "asio/impl/io_context.hpp"
+#include "impl/io_context.hpp"
 #if defined(ASIO_HEADER_ONLY)
 # include "asio/impl/io_context.ipp"
 #endif // defined(ASIO_HEADER_ONLY)
