@@ -19,29 +19,29 @@
 
 #if !defined(ASIO_HAS_THREADS) \
   || defined(ASIO_DISABLE_FENCED_BLOCK)
-# include "asio/detail/null_fenced_block.hpp"
+# include "../detail/null_fenced_block.hpp"
 #elif defined(ASIO_HAS_STD_ATOMIC)
-# include "asio/detail/std_fenced_block.hpp"
+# include "../detail/std_fenced_block.hpp"
 #elif defined(__MACH__) && defined(__APPLE__)
-# include "asio/detail/macos_fenced_block.hpp"
+# include "../detail/macos_fenced_block.hpp"
 #elif defined(__sun)
-# include "asio/detail/solaris_fenced_block.hpp"
+# include "../detail/solaris_fenced_block.hpp"
 #elif defined(__GNUC__) && defined(__arm__) \
   && !defined(__GCC_HAVE_SYNC_COMPARE_AND_SWAP_4)
-# include "asio/detail/gcc_arm_fenced_block.hpp"
+# include "../detail/gcc_arm_fenced_block.hpp"
 #elif defined(__GNUC__) && (defined(__hppa) || defined(__hppa__))
-# include "asio/detail/gcc_hppa_fenced_block.hpp"
+# include "../detail/gcc_hppa_fenced_block.hpp"
 #elif defined(__GNUC__) && (defined(__i386__) || defined(__x86_64__))
-# include "asio/detail/gcc_x86_fenced_block.hpp"
+# include "../detail/gcc_x86_fenced_block.hpp"
 #elif defined(__GNUC__) \
   && ((__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)) \
   && !defined(__INTEL_COMPILER) && !defined(__ICL) \
   && !defined(__ICC) && !defined(__ECC) && !defined(__PATHSCALE__)
-# include "asio/detail/gcc_sync_fenced_block.hpp"
+# include "../detail/gcc_sync_fenced_block.hpp"
 #elif defined(ASIO_WINDOWS) && !defined(UNDER_CE)
-# include "asio/detail/win_fenced_block.hpp"
+# include "../detail/win_fenced_block.hpp"
 #else
-# include "asio/detail/null_fenced_block.hpp"
+# include "../detail/null_fenced_block.hpp"
 #endif
 
 namespace asio {
