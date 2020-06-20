@@ -22,9 +22,6 @@
 #include "asio/detail/push_options.hpp"
 
 namespace asio {
-#if !defined(GENERATING_DOCUMENTATION)
-namespace strand_ { // Ensure friend 'prefer()' is not in asio namespace.
-#endif // !defined(GENERATING_DOCUMENTATION)
 
 /// Provides serialised function invocation for any executor type.
 template <typename Executor>
@@ -177,18 +174,18 @@ public:
 
   /// Forward a preference to the underlying executor.
   template <typename Property>
-  friend typename enable_if<
+  typename enable_if<
     can_prefer<const Executor&, Property>::value,
     strand<typename decay<
       typename prefer_result_type<const Executor&, Property>::type
     >::type>
-  >::type prefer(const strand& s, const Property& p)
+  >::type prefer(const Property& p) const
     ASIO_NOEXCEPT_IF((
       is_nothrow_prefer<const Executor&, Property>::value))
   {
     return strand<typename decay<
       typename require_result_type<const Executor&, Property>::type
-        >::type>(asio::prefer(s.executor_, p), s.impl_);
+        >::type>(asio::prefer(executor_, p), impl_);
   }
 
 #if !defined(ASIO_STANDARD_EXECUTORS_ONLY)
@@ -366,11 +363,6 @@ private:
   Executor executor_;
   implementation_type impl_;
 };
-
-#if !defined(GENERATING_DOCUMENTATION)
-} // namespace strand_
-using strand_::strand;
-#endif // !defined(GENERATING_DOCUMENTATION)
 
 /** @defgroup make_strand asio::make_strand
  *
