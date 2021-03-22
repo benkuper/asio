@@ -20,15 +20,15 @@
 #if defined(ASIO_USE_WOLFSSL)
 # include <wolfssl/options.h>
 #endif // defined(ASIO_USE_WOLFSSL)
-#include "../../../../../../common/openssl/include/openssl/opensslconf.h"
-#include "../../../../../../common/openssl/include/openssl/ssl.h"
+#include "../../../openssl/opensslconf.h"
+#include "../../../openssl/ssl.h"
 #if !defined(OPENSSL_NO_ENGINE)
-# include "../../../../../../common/openssl/include/openssl/engine.h"
+# include "../../../openssl/engine.h"
 #endif // !defined(OPENSSL_NO_ENGINE)
-#include "../../../../../../common/openssl/include/openssl/dh.h"
-#include "../../../../../../common/openssl/include/openssl/err.h"
-#include "../../../../../../common/openssl/include/openssl/rsa.h"
-#include "../../../../../../common/openssl/include/openssl/x509.h"
-#include "../../../../../../common/openssl/include/openssl/x509v3.h"
+#include "../../../openssl/dh.h"
+#include "../../../openssl/err.h"
+#include "../../../openssl/rsa.h"
+#include "../../../openssl/x509.h"
+#include "../../../openssl/x509v3.h"
 
 #endif // ASIO_SSL_DETAIL_OPENSSL_TYPES_HPP
